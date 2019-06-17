@@ -3,4 +3,9 @@ class Delivery
   def initialize(command)
     @command = command  
   end
+
+  def command
+    @command
+  end
+
 end
