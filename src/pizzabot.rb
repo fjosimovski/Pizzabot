@@ -32,6 +32,7 @@ class Pizzabot
           x_path += "E"
       end
     end
+    @current_position[0] = current_position
     x_path
   end
 
@@ -47,6 +48,7 @@ class Pizzabot
         y_path += "S"
       end
     end
+    @current_position[1] = current_position
     y_path
   end
 end
