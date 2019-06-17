@@ -6,7 +6,8 @@ class Delivery
   end
 
   def run
-    Pizzabot.new(@grid_size, @drop_points)
+    pizzabot = Pizzabot.new(@grid_size, @drop_points)
+    pizzabot.action(@drop_points)
   end
 
   def command
@@ -27,5 +28,7 @@ class Delivery
   def get_drop_points(command)
     # match drop points in command that are in brackets. Ex: (2,3) or (3, 4)
     points = command.scan(/\(\s*\d+,\s*\d+\s*\)/)
+    raise ArgumentError, "At least one drop point is required" if points.empty?
+    points
   end
 end
