@@ -3,6 +3,9 @@ class Delivery
   def initialize(command)
     @command = command 
     parse_command(command)
+  end
+
+  def run
     Pizzabot.new(@grid_size, @drop_points)
   end
 
