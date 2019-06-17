@@ -18,4 +18,11 @@ describe "Delivery" do
     end
   end
 
+  context "command for parsing points" do
+    it "successfuly parses points" do
+      delivery = Delivery.new("5x5 (1, 3) (4, 4), (0, 2)")
+      points = delivery.get_drop_points(delivery.command)
+      expect(points).to include("(4, 4)")
+    end
+  end
 end
