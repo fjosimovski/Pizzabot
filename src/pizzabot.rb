@@ -4,6 +4,10 @@ class Pizzabot
     @grid_size = grid_size
   end
 
+  def grid_size
+    @grid_size
+  end
+
   def move(current_position, required_position)
     @current_position = current_position
     @required_position = required_position
